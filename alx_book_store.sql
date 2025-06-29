@@ -1,3 +1,7 @@
+CREATE DATABASE alx_book_store;
+
+USE alx_book_store;
+
 CREATE TABLE authors (
     author_id INT PRIMARY KEY,
     author_name VARCHAR(215)
