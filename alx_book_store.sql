@@ -30,7 +30,7 @@ CREATE TABLE Orders (
     order_id INT PRIMARY KEY,
     customer_id INT,
     CONSTRAINT customer_constraint
-     FOREIGN KEY customer_id REFERENCES customers(customer_id),
+     FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
     order_date DATE
 );
 
@@ -38,10 +38,10 @@ CREATE TABLE Order_Details (
     order_detail_id INT PRIMARY KEY,
     order_id INT,
     CONSTRAINT order_c
-     FOREIGN KEY order_id REFERENCES orders(order_id),
+     FOREIGN KEY (order_id) REFERENCES orders(order_id),
     book_id INT,
     CONSTRAINT bk_id 
-     FOREIGN KEY book_id REFERENCES books(book_id),
+     FOREIGN KEY (book_id) REFERENCES books(book_id),
     quantity TEXT
 );
 
